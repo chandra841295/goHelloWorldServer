@@ -52,6 +52,8 @@ pipeline:
                     repo: chandram1 / sample_docker_hub
                     tags:
                       - <+pipeline.sequenceId>
+        delegateSelectors:
+          - kubernetes-delegate
     - stage:
         name: Run integration test
         identifier: Run_integration_test
