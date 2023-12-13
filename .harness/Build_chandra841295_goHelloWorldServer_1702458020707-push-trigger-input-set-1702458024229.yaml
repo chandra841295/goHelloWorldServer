@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_chandra841295_goHelloWorldServer_1702458020707-push-trigger-input-set
+  identifier: Build_chandra841295_goHelloWorldServer_1702458020707pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: cicd_project
+  pipeline:
+    identifier: Build_chandra841295_goHelloWorldServer_1702458020707
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
