@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_chandra841295_goHelloWorldServer_1702458020707-pr-trigger-input-set
+  identifier: Build_chandra841295_goHelloWorldServer_1702458020707prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: cicd_project
+  pipeline:
+    identifier: Build_chandra841295_goHelloWorldServer_1702458020707
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
