@@ -1,0 +1,33 @@
+pipeline:
+  name: Build goHelloWorldServer
+  identifier: Build_chandra841295_goHelloWorldServer_1702458020707
+  projectIdentifier: cicd_project
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: chandra841295/goHelloWorldServer
+        build: <+input>
